@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "95f80ec6-6975-4ff4-9da8-87f55ef32646",
+		"name": "pocket",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Pocket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "Tropa Pocket",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "test description",
+							"type": "text"
+						},
+						{
+							"key": "tropa",
+							"value": "fdgdfsg",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseurl}}/pocket",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"pocket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Content",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "php video",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "test description",
+							"type": "text"
+						},
+						{
+							"key": "keyword",
+							"value": "php",
+							"type": "text"
+						},
+						{
+							"key": "url",
+							"value": "https://www.youtube.com/watch?v=uU1-ZqIbYes",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseurl}}/pockets/1/content",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"pockets",
+						"1",
+						"content"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Contents by Pocket id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/pockets/1/contents",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"pockets",
+						"1",
+						"contents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Contents by Keyword",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/contents?keyword=php,laravel",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"contents"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "php,laravel"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete content by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/contents/1",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"contents",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
