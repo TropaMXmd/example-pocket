@@ -136,7 +136,7 @@ class ContentTest extends TestCase
         $response = $this->post('/api/pockets/'.$pocketId.'/content', [
             'title' => 'Title test php',
             'description' => 'Test php content description',
-            'url' => 'https://www.youtube.com/watch?v=uU1-ZqIbYes',
+            'url' => 'https://www.youtube.com/watch?v=xd_79dTncAc&list=RDCMUC_UMEcP_kF0z4E6KbxCpV1w&index=2',
             'keyword' => 'php'
         ]);
 
