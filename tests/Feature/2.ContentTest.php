@@ -222,9 +222,10 @@ class ContentTest extends TestCase
      */
     public function test_contentId_valid_delete_content()
     {
-        $contentId = 1;
+        $ids = Content::all()->modelKeys();
+        $randcontentId = array_rand($ids,1);
         $this->withoutExceptionHandling();
-        $response = $this->delete('/api/contents/'.$contentId);
+        $response = $this->delete('/api/contents/'.$ids[$randcontentId]);
 
         $response->assertStatus(410)
                 ->assertJson([

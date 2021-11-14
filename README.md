@@ -13,4 +13,4 @@ To migrate table run: sail artisan migrate
 To run queue: sail artisan queue:work
 To run test: sail artisan test
 
-A postman api collection is included with the project to test api
+A postman api collection is included with the project to test api endpoints
